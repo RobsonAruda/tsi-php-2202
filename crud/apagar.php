@@ -5,15 +5,11 @@ require_once '../bancoDeDados/conecta.php';
 //?? (operador de coalescência) quando não aparece o ID ele substitui por 0)
 $id = $_POST['id'] ?? 0;
 
-
 $id = preg_replace('/\D/', '', $id);
 
 if ( $bd->exec("DELETE FROM alunos WHERE id = $id") ){
-
     $apagou = true;
-
 }else{
-
     $apagou = false;
 }
 

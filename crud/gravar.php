@@ -1,4 +1,5 @@
 <?php
+
 //Buscamos o código que conecta no SGBD
 require_once '../bancoDeDados/conecta.php';
 //Na linha 3 estamos trazendo todo o código de
@@ -15,6 +16,7 @@ $consulta =
                         (nome, turno, inicio)
                     VALUES
                         (:nome, :turno, :inicio)');
+
 /*
 A função $bd->prepare() retorna 
 outra variável (objeto), essa outra 
@@ -25,6 +27,7 @@ do usuário com a consulta SQL
 $consulta->bindParam(':nome', $nome);
 $consulta->bindParam(':turno', $turno);
 $consulta->bindParam(':inicio', $inicio);
+
 /*
 A função $consulta->bindParam() substitui
 os rótulos (ex.: ":nome") pelos dados 
@@ -38,5 +41,10 @@ if( $consulta->execute() ){
 }
 //Finalmente executamos a consulta
 //no SGBD
-
 include 'index.php';    
+
+
+
+
+
+
