@@ -10,6 +10,9 @@
 </head>
 
 <body>
+<?php
+    require_once '../controleDeSessao/controle.php';
+    ?>
     <div class='container'>
         <form action="gravar.php" method="post">
             <label for="nome">Nome: </label>

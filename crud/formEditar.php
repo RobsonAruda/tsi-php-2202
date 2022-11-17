@@ -8,6 +8,9 @@
     <title>Formulário de Cadastro</title>
 </head>
 <body>
+<?php
+    require_once '../controleDeSessao/controle.php';
+    ?>
     <div class='container'>
         <form action="atualizar.php" method="post">
             <label for="nome">Nome: </label>
